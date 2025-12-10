@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Portfolio</title>
+    <link rel="stylesheet" href="style-index.css">
+
+    <!-- Bawal pumasok kung walang loggedUser -->
+    <script>
+        if (!localStorage.getItem("loggedUser")) {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+    <div class="logo">My Portfolio</div>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+</header>
+
+
+    <!-- HOME CONTENT -->
+    <main class="page hero">
+        <div class="hero-content">
+            <h1> <span>Welcome to My Page!</span></h1>
+            <p>
+                Step into a space where ideas come to life. Whether you're here to explore, get inspired, or start a new project, we're excited to be part of your creative journey.
+Make yourself at home!
+            </p>
+
+            <!-- ✅ FIXED: diretso na sa projects.html -->
+            <a href="projects.html" class="btn-primary">View My Projects</a>
+        </div>
+    </main>
+
+    <!-- LOGOUT SCRIPT -->
+    <script>
+        function logout() {
+            let confirmLogout = confirm("Are you sure you want to logout?");
+            if (confirmLogout) {
+                localStorage.removeItem("loggedUser");
+                alert("You have been logged out successfully.");
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</body>
+</html>

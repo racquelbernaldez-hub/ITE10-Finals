@@ -1,0 +1,149 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, Arial, sans-serif;
+}
+
+/* =========================================
+   BACKGROUND
+========================================= */
+body {
+    height: 100vh;
+    background: radial-gradient(circle at top left, #0f1a2b, #10071a 60%, #0a0a0c);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GEOMETRIC PARTICLE BACKGROUND – removed broken Imgur image */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, #0f1a2b, #10071a 60%, #0a0a0c);
+    opacity: 0.4;
+}
+
+
+
+
+
+/* =========================================
+   LOGIN / REGISTER BOX
+========================================= */
+.login-box {
+    position: relative;
+    width: 380px;
+    padding: 35px;
+    background: rgba(0, 255, 200, 0.07);
+    border: 1px solid rgba(0, 255, 200, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    animation: fadeIn 1.5s ease;
+    color: #dff;
+    z-index: 2;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #a8fff6;
+}
+
+/* =========================================
+   INPUT FIELDS
+========================================= */
+.input-field {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 255, 200, 0.2);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.input-field .icon {
+    margin-right: 10px;
+    color: white;
+}
+
+.input-field input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 100%;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+.btn-login,
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* Login Button */
+.btn-login {
+    background: linear-gradient(to right, #c6f7f0, #e4ffff);
+    color: #000;
+}
+
+.btn-login:hover {
+    opacity: 0.9;
+}
+
+/* Register Button */
+.btn-register {
+    background: #00ffcc;
+    color: #000;
+}
+
+.btn-register:hover {
+    background: #00e6b8;
+}
+
+/* =========================================
+   LINKS
+========================================= */
+.forgot {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #a8fff6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* =========================================
+   LINE SEPARATOR
+========================================= */
+hr {
+    margin: 20px 0;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+@keyframes fadeIn {
+    from { 
+        transform: translateY(30px); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
